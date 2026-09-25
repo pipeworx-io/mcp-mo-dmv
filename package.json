@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-mo-dmv",
-  "version": "0.1.0",
-  "description": "Missouri license offices with hours, contract agent and closure dates, refreshed daily",
+  "version": "0.1.1",
+  "description": "Missouri DMV MCP — the Department of Revenue's driver and motor-vehicle license offices,",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-mo-dmv": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "mo-dmv"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-mo-dmv"
+    "url": "git+https://github.com/pipeworx-io/mcp-mo-dmv.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-d140bc5e44365f201abd9ac0f04b6bd86fb7b235d45151d82b83cffdbdb2d2eb",
+    "sourceCommit": "adb69d997f82a62e8e22b594488c7d04a227db35"
   }
 }

@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/mo-dmv",
-  "title": "Missouri License Offices",
-  "description": "Missouri license offices with hours, contract agent and closure dates, refreshed daily",
-  "version": "0.1.0",
+  "title": "Mo Dmv",
+  "description": "Missouri DMV MCP — the Department of Revenue's driver and motor-vehicle license offices,",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/mo-dmv",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-mo-dmv",
