@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-mo-dmv",
-  "version": "0.1.1",
-  "description": "Missouri DMV MCP — the Department of Revenue's driver and motor-vehicle license offices,",
+  "version": "0.2.0",
+  "description": "Missouri DMV MCP — the Department of Revenue's driver and motor-vehicle license offices, with hours, the contract agent who runs each office, and the upcoming dates each office is closed. Keyless.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-mo-dmv": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "mo-dmv"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-mo-dmv.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/mo-dmv",
   "pipeworx": {
-    "sourceHash": "v1-d140bc5e44365f201abd9ac0f04b6bd86fb7b235d45151d82b83cffdbdb2d2eb",
-    "sourceCommit": "adb69d997f82a62e8e22b594488c7d04a227db35"
+    "mode": "gateway",
+    "slug": "mo-dmv",
+    "gatewaySlug": "mo-dmv",
+    "sourceHash": "v1-1bbd19ddd5085d69bc49f71d1bbdef2eb5ec972a533d5745042af08403dab2e9",
+    "sourceCommit": "5c89d6abb778d45da5d92002eb251978622bedf9"
   }
 }

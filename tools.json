@@ -1,0 +1,30 @@
+[
+  {
+    "name": "mo_dmv_license_offices",
+    "description": "Find a Missouri license office — the Department of Revenue counters Missourians use as the DMV, for driver licenses, ID cards, license plates, titles and registration renewal. Returns street address, phone, the days and hours each office is open, coordinates, the contract agent and office manager who run it, and the upcoming dates it will be closed. Missouri refreshes this file daily, so it answers \"is the Columbia license office closed next week\", \"DMV office in Springfield MO\", \"license office hours in ZIP 63101\", and \"who runs the license bureau in Potosi\". Covers all 176 offices statewide.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "City name, matched as a substring, e.g. \"Columbia\", \"Springfield\", \"Kansas City\"."
+        },
+        "name": {
+          "type": "string",
+          "description": "Office-name substring, e.g. \"Columbia South\", \"Potosi\"."
+        },
+        "zip": {
+          "type": "string",
+          "description": "Five-digit Missouri ZIP code, or a prefix, e.g. \"63101\" or \"631\"."
+        },
+        "limit": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "Max offices to return (default 50, max 200)."
+        }
+      }
+    }
+  }
+]
